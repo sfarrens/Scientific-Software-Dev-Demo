@@ -1,3 +1,9 @@
+"""Cosmology.
+
+This module implements various cosmology routines.
+
+"""
+
 import numpy as np
 
 from .constants import Mpc, G

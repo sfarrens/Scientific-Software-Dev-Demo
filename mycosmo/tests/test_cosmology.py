@@ -1,7 +1,7 @@
 import numpy as np
 import numpy.testing as npt
 
-from ..cosmology import hubble, critical_density
+from mycosmo.cosmology import hubble, critical_density
 
 
 class TestCosmology:
