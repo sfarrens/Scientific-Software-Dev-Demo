@@ -1,0 +1,3 @@
+# About
+
+`mycosmo` is a cosmology package written to...
