@@ -10,7 +10,7 @@ from .constants import Mpc, G
 
 
 def hubble(redshift, cosmo_dict):
-    """Hubble Parameter.
+    r"""Hubble Parameter.
 
     Calculate the Hubble parameter at a given redshift using the cosmological parameter values provided.
 
