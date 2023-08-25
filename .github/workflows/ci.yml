@@ -5,7 +5,7 @@ on:
     branches:
      - main
 
-  jobs:
+jobs:
   test-full:
     name: Run CI Tests
     runs-on: ${{ matrix.os }}
