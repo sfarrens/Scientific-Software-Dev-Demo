@@ -1,5 +1,6 @@
 [project]
 name = "mycosmo"
+readme = "README.md"
 requires-python = ">=3.11"
 authors = [{ "name" = "Samuel Farrens", "email" = "samuel.farrens@cea.fr" }]
 maintainers = [{ "name" = "Samuel Farrens", "email" = "samuel.farrens@cea.fr" }]
