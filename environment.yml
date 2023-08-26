@@ -1,0 +1,19 @@
+name: mycosmo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.25
+  - black
+  - myst-parser
+  - numpydoc
+  - pytest
+  - pytest-black
+  - pytest-emoji
+  - pytest-cov
+  - sphinx
+  - sphinx-book-theme
+  - twine
+  - pip
+  - pip:
+    - pytest-pydocstyle

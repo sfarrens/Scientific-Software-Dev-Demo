@@ -14,4 +14,3 @@ Submodules
 
    mycosmo.constants
    mycosmo.cosmology
-   mycosmo.cosmology2
