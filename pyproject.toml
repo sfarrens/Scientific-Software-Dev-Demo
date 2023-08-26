@@ -1,0 +1,39 @@
+[project]
+name = "mycosmo"
+requires-python = ">=3.11"
+authors = [{ "name" = "Samuel Farrens", "email" = "samuel.farrens@cea.fr" }]
+maintainers = [{ "name" = "Samuel Farrens", "email" = "samuel.farrens@cea.fr" }]
+description = 'This is an example cosmology package.'
+dependencies = ["numpy"]
+version = "0.0.1"
+
+[project.optional-dependencies]
+docs = [
+    "myst-parser",
+    "numpydoc",
+    "sphinx",
+    "sphinxcontrib-bibtex",
+    "sphinx-book-theme",
+]
+lint = ["black"]
+release = ["build", "twine"]
+test = [
+    "pytest",
+    "pytest-black",
+    "pytest-cov",
+    "pytest-emoji",
+    "pytest-pydocstyle",
+]
+
+# Install for development
+dev = ["mycosmo[docs,lint,release,test]"]
+
+[tool.black]
+line-length = 88
+
+[tool.pydocstyle]
+convention = "numpy"
+
+[tool.pytest.ini_options]
+addopts = ["--verbose", "--black", "--emoji", "--pydocstyle", "--cov=mypack"]
+testpaths = ["mycosmo"]
