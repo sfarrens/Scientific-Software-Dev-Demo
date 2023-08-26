@@ -36,5 +36,5 @@ line-length = 88
 convention = "numpy"
 
 [tool.pytest.ini_options]
-addopts = ["--verbose", "--black", "--emoji", "--pydocstyle", "--cov=mypack"]
+addopts = ["--verbose", "--black", "--emoji", "--pydocstyle", "--cov=mycosmo"]
 testpaths = ["mycosmo"]
