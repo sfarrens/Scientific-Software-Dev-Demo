@@ -1,0 +1,24 @@
+image: python:latest
+
+before_script:
+  - python --version 
+  - python -m pip install ".[docs,test]"
+
+test:
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  script:
+    - python -m pytest
+  only:
+    refs:
+      - merge_requests
+
+pages:
+  script:
+    - sphinx-apidoc -Mfeo docs/source mycosmo
+    - sphinx-build docs/source docs/build
+    - mv docs/build public/
+  artifacts:
+    paths:
+      - public
+  only:
+      - main
