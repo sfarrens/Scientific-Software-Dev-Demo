@@ -291,25 +291,39 @@ document.write(`
 <dt class="sig sig-object py" id="mycosmo.cosmology.critical_density">
 <span class="sig-prename descclassname"><span class="pre">mycosmo.cosmology.</span></span><span class="sig-name descname"><span class="pre">critical_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redshift</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmo_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mycosmo/cosmology.html#critical_density"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mycosmo.cosmology.critical_density" title="Permalink to this definition">#</a></dt>
 <dd><p>Critical Density.</p>
-<p>Calculate the critical density at a given redshift.</p>
+<p>Calculate the critical density at a given redshift using the cosmological parameter values provided.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>redshift</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Redshift</p></li>
-<li><p><strong>cosmo_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a>) – Dictionary of cosmological constants</p></li>
+<li><p><strong>redshift</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.25)"><em>numpy.ndarray</em></a>) – Redshift(s) at which the critical density should be calculated</p></li>
+<li><p><strong>cosmo_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a>) – <p>Dictionary of cosmological constants. Must contain the following keys:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">H0</span></code>: The Hubble parameter value at redshift zero.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">omega_m_0</span></code>: The matter density at redshift zero.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">omega_k_0</span></code>: The curvature density at redshift zero.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">omega_lambda_0</span></code>: The dark energy density at redshift zero.</p></li>
+</ul>
+</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value of the critical density</p>
+<dd class="field-even"><p>Value of the critical density (km/m^3) at the specified redshift(s) for a given cosmology.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)">float</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)">float</a> or <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.25)">numpy.ndarray</a></p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>Implements</p>
+<p>This function implements the calculation of the critical density as follows:</p>
 <div class="math notranslate nohighlight">
 \[\rho_c(z) = \frac{3H^2(z)}{8\pi G}\]</div>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">mycosmo.cosmology</span> <span class="kn">import</span> <span class="n">critical_density</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cosmo_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;H0&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;omega_m_0&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="s2">&quot;omega_k_0&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;omega_lambda_0&quot;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">critical_density</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">cosmo_dict</span><span class="p">)</span>
+<span class="go">9.203859495267889e-27</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">

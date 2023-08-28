@@ -283,27 +283,39 @@ document.write(`
 <div class="viewcode-block" id="critical_density"><a class="viewcode-back" href="../../mycosmo.cosmology.html#mycosmo.cosmology.critical_density">[docs]</a><span class="k">def</span> <span class="nf">critical_density</span><span class="p">(</span><span class="n">redshift</span><span class="p">,</span> <span class="n">cosmo_dict</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Critical Density.</span>
 
-<span class="sd">    Calculate the critical density at a given redshift.</span>
+<span class="sd">    Calculate the critical density at a given redshift using the cosmological parameter values provided.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    redshift : float</span>
-<span class="sd">        Redshift</span>
+<span class="sd">    redshift : float or numpy.ndarray</span>
+<span class="sd">        Redshift(s) at which the critical density should be calculated</span>
 <span class="sd">    cosmo_dict : dict</span>
-<span class="sd">        Dictionary of cosmological constants</span>
+<span class="sd">        Dictionary of cosmological constants. Must contain the following keys:</span>
+
+<span class="sd">        * ``H0``: The Hubble parameter value at redshift zero.</span>
+<span class="sd">        * ``omega_m_0``: The matter density at redshift zero.</span>
+<span class="sd">        * ``omega_k_0``: The curvature density at redshift zero.</span>
+<span class="sd">        * ``omega_lambda_0``: The dark energy density at redshift zero.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    float</span>
-<span class="sd">        Value of the critical density</span>
+<span class="sd">    float or numpy.ndarray</span>
+<span class="sd">        Value of the critical density (km/m^3) at the specified redshift(s) for a given cosmology.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">    Implements</span>
+<span class="sd">    This function implements the calculation of the critical density as follows:</span>
 
 <span class="sd">    .. math::</span>
 
 <span class="sd">        \rho_c(z) = \frac{3H^2(z)}{8\pi G}</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; from mycosmo.cosmology import critical_density</span>
+<span class="sd">    &gt;&gt;&gt; cosmo_dict = {&quot;H0&quot;: 70, &quot;omega_m_0&quot;: 0.3, &quot;omega_k_0&quot;: 0.0, &quot;omega_lambda_0&quot;: 0.7}</span>
+<span class="sd">    &gt;&gt;&gt; critical_density(0.0, cosmo_dict)</span>
+<span class="sd">    9.203859495267889e-27</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">H_z_si</span> <span class="o">=</span> <span class="n">hubble</span><span class="p">(</span><span class="n">redshift</span><span class="p">,</span> <span class="n">cosmo_dict</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1e3</span> <span class="o">/</span> <span class="n">Mpc</span>
