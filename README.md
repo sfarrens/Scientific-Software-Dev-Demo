@@ -6,6 +6,8 @@ This repository was made for a course on scientific software development at the 
 
 The slides accompanying this repository can be found [here](https://sfarrens.github.io/presentations/#/).
 
+Example API documentation can be found [here](https://sfarrens.github.io/ecole-euclid-2023/).
+
 ## Requirements
 
 To follow this course you will need to have Python (ideally v3.11) installed with the following dependencies:
