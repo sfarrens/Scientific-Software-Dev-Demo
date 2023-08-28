@@ -12,6 +12,16 @@ test:
     refs:
       - merge_requests
 
+# Run verification tests
+Verification:
+  script:
+    - export TF_CPP_MIN_LOG_LEVEL=1
+    - python -m pip install astropy
+    - python -m pytest scripts/astropy_verification.py
+  when: manual
+  only:
+    - merge_requests
+
 pages:
   script:
     - sphinx-apidoc -Mfeo docs/source mycosmo
