@@ -7,7 +7,7 @@ This script compares the performance of `mycosmo` to routines provided in Astrop
 import numpy as np
 from astropy.cosmology import WMAP9 as cosmo
 
-from mycosmo.cosmology import hubble, critical_density
+from mycosmo.cosmology import critical_density, hubble
 
 
 class TestAstropy:
