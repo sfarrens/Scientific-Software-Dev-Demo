@@ -14,21 +14,18 @@ lint = ["black"]
 release = ["build", "twine"]
 test = [
     "pytest",
-    "pytest-black",
     "pytest-cov",
     "pytest-emoji",
     "pytest-pydocstyle",
 ]
+verify = ["astropy"]
 
 # Install for development
 dev = ["mycosmo[docs,lint,release,test]"]
-
-[tool.black]
-line-length = 88
 
 [tool.pydocstyle]
 convention = "numpy"
 
 [tool.pytest.ini_options]
-addopts = ["--verbose", "--black", "--emoji", "--pydocstyle", "--cov=mycosmo"]
+addopts = ["--verbose", "--emoji", "--pydocstyle", "--cov=mycosmo"]
 testpaths = ["mycosmo"]

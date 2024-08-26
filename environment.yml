@@ -4,11 +4,13 @@ channels:
 dependencies:
   - python=3.11
   - numpy>=1.25
+  - astropy
   - black
+  - build
+  - isort
   - myst-parser
   - numpydoc
   - pytest
-  - pytest-black
   - pytest-emoji
   - pytest-cov
   - sphinx
