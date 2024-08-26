@@ -5,8 +5,11 @@ WORKDIR /home
 ENV SHELL /bin/bash
 
 RUN apt-get update
-RUN apt-get install build-essential -y
+RUN apt-get install -y build-essential && \
+    apt-get install -y nano
 
 COPY * .
 
 RUN conda env create -f environment.yml
+
+RUN echo "conda activate mycosmo" >> ~/.bashrc

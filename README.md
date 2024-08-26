@@ -4,6 +4,8 @@
 
 This repository was made for a course on scientific software development at the [2023 edition of the Euclid Summer School](https://ecole-euclid.cnrs.fr/2023-accueil/).
 
+> The content was updated for the [2024 edition of the Rodolphe Clédassou Summer School](https://ecole-euclid.cnrs.fr/2024-accueil/)
+
 The slides accompanying this repository can be found [here](https://sfarrens.github.io/presentations/#/).
 
 Example API documentation can be found [here](https://sfarrens.github.io/ecole-euclid-2023/).
@@ -13,11 +15,12 @@ Example API documentation can be found [here](https://sfarrens.github.io/ecole-e
 To follow this course you will need to have Python (ideally v3.11) installed with the following dependencies:
 
 - numpy
+- astropy
 - black
+- isort
 - myst-parser
 - numpydoc
 - pytest
-- pytest-black
 - pytest-pydocstyle
 - pytest-emoji
 - pytest-cov
@@ -53,12 +56,12 @@ Finally, you can avoid installing any of the packages by simply pulling the prov
 
 ```bash
 docker pull ghcr.io/sfarrens/ecole-euclid-2023:main
-docker tag ghcr.io/sfarrens/ecole-euclid-2023:main ecole-euclid-2023
+docker tag ghcr.io/sfarrens/ecole-euclid-2023:main ecole-rc-2024
 ```
 
 Then you can launch an interactive container as follows:
 
 ```bash
-docker run -it ecole-euclid-2023
+docker run -it ecole-rc-2024
 conda activate mycosmo
 ```
