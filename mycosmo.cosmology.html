@@ -28,8 +28,8 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -37,7 +37,7 @@
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -324,8 +324,8 @@ document.write(`
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>redshift</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><em>numpy.ndarray</em></a>) – Redshift(s) at which the critical density should be calculated</p></li>
-<li><p><strong>cosmo_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><em>dict</em></a>) – <p>Dictionary of cosmological constants. Must contain the following keys:</p>
+<li><p><strong>redshift</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><em>numpy.ndarray</em></a>) – Redshift(s) at which the critical density should be calculated</p></li>
+<li><p><strong>cosmo_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – <p>Dictionary of cosmological constants. Must contain the following keys:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">H0</span></code>: The Hubble parameter value at redshift zero.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">omega_m_0</span></code>: The matter density at redshift zero.</p></li>
@@ -339,7 +339,7 @@ document.write(`
 <dd class="field-even"><p>Value of the critical density (km/m^3) at the specified redshift(s) for a given cosmology.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a> or <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)">numpy.ndarray</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a> or <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)">numpy.ndarray</a></p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
@@ -347,7 +347,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\rho_c(z) = \frac{3H^2(z)}{8\pi G}\]</div>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">mycosmo.cosmology</span> <span class="kn">import</span> <span class="n">critical_density</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">mycosmo.cosmology</span><span class="w"> </span><span class="kn">import</span> <span class="n">critical_density</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cosmo_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;H0&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;omega_m_0&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="s2">&quot;omega_k_0&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;omega_lambda_0&quot;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">critical_density</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">cosmo_dict</span><span class="p">)</span>
 <span class="go">9.203859495267889e-27</span>
@@ -363,8 +363,8 @@ document.write(`
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>redshift</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><em>numpy.ndarray</em></a>) – Redshift(s) at which the Hubble parameter should be calculated</p></li>
-<li><p><strong>cosmo_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><em>dict</em></a>) – <p>Dictionary of cosmological constants. Must contain the following keys:</p>
+<li><p><strong>redshift</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><em>numpy.ndarray</em></a>) – Redshift(s) at which the Hubble parameter should be calculated</p></li>
+<li><p><strong>cosmo_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – <p>Dictionary of cosmological constants. Must contain the following keys:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">H0</span></code>: The Hubble parameter value at redshift zero.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">omega_m_0</span></code>: The matter density at redshift zero.</p></li>
@@ -378,7 +378,7 @@ document.write(`
 <dd class="field-even"><p>Value of the Hubble parameter (km/s/Mpc) at the specified redshift(s) for a given cosmology.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a> or <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)">numpy.ndarray</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a> or <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)">numpy.ndarray</a></p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
@@ -387,7 +387,7 @@ document.write(`
 \[H(z) = \sqrt{H_0^2 (\Omega_{m,0}(1+z)^3 + \Omega_{k,0}(1+z)^2 +
     \Omega_{\Lambda,0})}\]</div>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">mycosmo.cosmology</span> <span class="kn">import</span> <span class="n">hubble</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">mycosmo.cosmology</span><span class="w"> </span><span class="kn">import</span> <span class="n">hubble</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cosmo_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;H0&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;omega_m_0&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="s2">&quot;omega_k_0&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;omega_lambda_0&quot;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hubble</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">cosmo_dict</span><span class="p">)</span>
 <span class="go">70.0</span>

@@ -3,8 +3,8 @@ mycosmo package
 
 .. automodule:: mycosmo
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Submodules
 ----------
