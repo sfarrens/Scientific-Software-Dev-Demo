@@ -1,4 +1,11 @@
 # Scientific Software Development Demo
+
+[![CI](https://github.com/sfarrens/Scientific-Software-Dev-Demo/actions/workflows/ci.yml/badge.svg)](https://github.com/sfarrens/Scientific-Software-Dev-Demo/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://sfarrens.github.io/Scientific-Software-Dev-Demo/)
+[![Docker](https://img.shields.io/badge/docker-ghcr.io-blue.svg)](https://ghcr.io/sfarrens/scientific-software-dev-demo)
+
 > Author: [Samuel Farrens](https://sfarrens.github.io/)  
 > Email: samuel.farrens@cea.fr
 
@@ -6,7 +13,7 @@ This repository provides a demonstration of packaging a Python code for a course
 
 The slides accompanying this repository can be found [here](https://sfarrens.github.io/presentations/#/).
 
-Example API documentation for this repository can be found [here](https://sfarrens.github.io/ecole-euclid-2023/).
+Example API documentation for this repository can be found [here](https://sfarrens.github.io/Scientific-Software-Dev-Demo/).
 
 ## Changelog
 - 01/06/2025: The content was updated for the [2025 COLOURS Programme](https://indico.ijclab.in2p3.fr/event/11110/)
@@ -55,16 +62,19 @@ conda activate mycosmo
 
 ### Docker image
 
-Finally, you can avoid installing any of the packages by simply pulling the provided [Docker](https://www.docker.com/) image. Note that you will need to [log in to the GitHub container registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry).
+You can run the code using the provided [Docker](https://www.docker.com/) image from the GitHub Container Registry. First, you'll need to authenticate with the GitHub Container Registry:
 
 ```bash
-docker login ghcr.io ...
-docker pull ghcr.io/sfarrens/Scientific-Software-Dev-Demo:main
-docker tag ghcr.io/sfarrens/Scientific-Software-Dev-Demo:main mycosmo
+# Login to GitHub Container Registry
+docker login ghcr.io
 ```
 
-Then you can launch an interactive container as follows:
+Then you can pull and run the image:
 
 ```bash
-docker run --rm -itv $PWD:/home mycosmo
+# Pull the latest image
+docker pull ghcr.io/sfarrens/scientific-software-dev-demo:main
+
+# Run an interactive container with your current directory mounted
+docker run --rm -it ghcr.io/sfarrens/scientific-software-dev-demo:main
 ```
