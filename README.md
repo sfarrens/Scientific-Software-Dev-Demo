@@ -1,14 +1,17 @@
-# École Euclid 2023
+# Scientific Software Development Demo
 > Author: [Samuel Farrens](https://sfarrens.github.io/)  
 > Email: samuel.farrens@cea.fr
 
-This repository was made for a course on scientific software development at the [2023 edition of the Euclid Summer School](https://ecole-euclid.cnrs.fr/2023-accueil/).
-
-> The content was updated for the [2024 edition of the Rodolphe Clédassou Summer School](https://ecole-euclid.cnrs.fr/2024-accueil/)
+This repository provides a demonstration of packaging a Python code for a course on Scientific Software Development.
 
 The slides accompanying this repository can be found [here](https://sfarrens.github.io/presentations/#/).
 
-Example API documentation can be found [here](https://sfarrens.github.io/ecole-euclid-2023/).
+Example API documentation for this repository can be found [here](https://sfarrens.github.io/ecole-euclid-2023/).
+
+## Changelog
+- 01/06/2025: The content was updated for the [2025 COLOURS Programme](https://indico.ijclab.in2p3.fr/event/11110/)
+- 26/08/2024: The content was updated for the [2024 edition of the Rodolphe Clédassou Summer School](https://ecole-euclid.cnrs.fr/2024-accueil/)
+- 28/08/2023: The first version was made for the [2023 edition of the Euclid Summer School](https://ecole-euclid.cnrs.fr/2023-accueil/)
 
 ## Requirements
 
@@ -56,12 +59,12 @@ Finally, you can avoid installing any of the packages by simply pulling the prov
 
 ```bash
 docker login ghcr.io ...
-docker pull ghcr.io/sfarrens/ecole-euclid-2023:main
-docker tag ghcr.io/sfarrens/ecole-euclid-2023:main ecole-rc-2024
+docker pull ghcr.io/sfarrens/Scientific-Software-Dev-Demo:main
+docker tag ghcr.io/sfarrens/Scientific-Software-Dev-Demo:main mycosmo
 ```
 
 Then you can launch an interactive container as follows:
 
 ```bash
-docker run --rm -itv $PWD:/home ecole-rc-2024
+docker run --rm -itv $PWD:/home mycosmo
 ```
