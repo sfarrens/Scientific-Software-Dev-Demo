@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>mycosmo package &#8212; mycosmo  documentation</title>
+    <title>Dependencies &#8212; mycosmo  documentation</title>
   
   
   
@@ -40,12 +40,12 @@
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'mycosmo';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'dependencies';</script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="mycosmo.constants module" href="mycosmo.constants.html" />
-    <link rel="prev" title="mycosmo" href="modules.html" />
+    <link rel="next" title="Citing mycosmo" href="citation.html" />
+    <link rel="prev" title="Quickstart Guide" href="quickstart.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,10 +153,10 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dependencies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="citation.html">Citing mycosmo</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="modules.html">mycosmo</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">mycosmo package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">mycosmo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="mycosmo.html">mycosmo package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="mycosmo.constants.html">mycosmo.constants module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mycosmo.cosmology.html">mycosmo.cosmology module</a></li>
 </ul>
@@ -217,7 +217,7 @@
       
       
       
-      <li><a href="_sources/mycosmo.rst" target="_blank"
+      <li><a href="_sources/dependencies.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -227,7 +227,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.rst</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -301,7 +301,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>mycosmo package</h1>
+    <h1>Dependencies</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -311,7 +311,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-dependencies">Core Dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-dependencies">Optional Dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-compatibility">Version Compatibility</a></li>
 </ul>
             </nav>
         </div>
@@ -323,22 +326,60 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="module-mycosmo">
-<span id="mycosmo-package"></span><h1>mycosmo package<a class="headerlink" href="#module-mycosmo" title="Link to this heading">#</a></h1>
-<p>MyCosmo.</p>
-<p>This is an example cosmology package.</p>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="mycosmo.constants.html">mycosmo.constants module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mycosmo.cosmology.html">mycosmo.cosmology module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mycosmo.cosmology.html#mycosmo.cosmology.critical_density"><code class="docutils literal notranslate"><span class="pre">critical_density()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="mycosmo.cosmology.html#mycosmo.cosmology.hubble"><code class="docutils literal notranslate"><span class="pre">hubble()</span></code></a></li>
+  <section id="dependencies">
+<h1>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">#</a></h1>
+<p>This page lists the mandatory dependencies required to use the <code class="docutils literal notranslate"><span class="pre">mycosmo</span></code> package.</p>
+<section id="core-dependencies">
+<h2>Core Dependencies<a class="headerlink" href="#core-dependencies" title="Link to this heading">#</a></h2>
+<p>The following packages are required for basic usage of <code class="docutils literal notranslate"><span class="pre">mycosmo</span></code>:</p>
+<ul class="simple">
+<li><p><strong>Python</strong> (&gt;=3.11): The programming language used to develop the package</p></li>
+<li><p><strong>NumPy</strong>: Required for numerical computations and array operations</p></li>
 </ul>
-</li>
-</ul>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<p>You can install the package and its core dependencies using pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>mycosmo
+</pre></div>
 </div>
+<p>This will install the package and its core dependencies (NumPy).</p>
+</section>
+<section id="optional-dependencies">
+<h2>Optional Dependencies<a class="headerlink" href="#optional-dependencies" title="Link to this heading">#</a></h2>
+<p>While not required for basic usage, the following optional dependencies are available for specific use cases:</p>
+<ul class="simple">
+<li><p><strong>Documentation</strong>: myst-parser, numpydoc, sphinx, sphinx-book-theme</p></li>
+<li><p><strong>Linting</strong>: black, isort</p></li>
+<li><p><strong>Release</strong>: build, twine</p></li>
+<li><p><strong>Testing</strong>: pytest, pytest-cov, pytest-emoji, pytest-pydocstyle</p></li>
+<li><p><strong>Verification</strong>: astropy</p></li>
+<li><p><strong>Development</strong>: Includes all of the above (docs, lint, release, test)</p></li>
+</ul>
+<p>You can install these optional dependencies using pip with the appropriate extras in development mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># For documentation</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;mycosmo[docs]&quot;</span>
+
+<span class="c1"># For linting</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;mycosmo[lint]&quot;</span>
+
+<span class="c1"># For release</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;mycosmo[release]&quot;</span>
+
+<span class="c1"># For testing</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;mycosmo[test]&quot;</span>
+
+<span class="c1"># For verification</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;mycosmo[verify]&quot;</span>
+
+<span class="c1"># For development (includes all optional dependencies)</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;mycosmo[dev]&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="version-compatibility">
+<h2>Version Compatibility<a class="headerlink" href="#version-compatibility" title="Link to this heading">#</a></h2>
+<p>The package is tested and guaranteed to work with Python 3.11 or higher. While it may work with earlier versions, these are not officially supported.</p>
 </section>
 </section>
 
@@ -354,20 +395,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="modules.html"
+       href="quickstart.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">mycosmo</p>
+        <p class="prev-next-title">Quickstart Guide</p>
       </div>
     </a>
     <a class="right-next"
-       href="mycosmo.constants.html"
+       href="citation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">mycosmo.constants module</p>
+        <p class="prev-next-title">Citing mycosmo</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -387,7 +428,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-dependencies">Core Dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-dependencies">Optional Dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-compatibility">Version Compatibility</a></li>
 </ul>
   </nav></div>
 

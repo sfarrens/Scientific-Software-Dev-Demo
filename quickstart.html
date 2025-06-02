@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to mycosmo’s documentation! &#8212; mycosmo  documentation</title>
+    <title>Quickstart Guide &#8212; mycosmo  documentation</title>
   
   
   
@@ -40,11 +40,12 @@
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'quickstart';</script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="About" href="about.html" />
+    <link rel="next" title="Dependencies" href="dependencies.html" />
+    <link rel="prev" title="About" href="about.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -107,8 +108,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -127,7 +126,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -151,9 +150,9 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Quickstart Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="citation.html">Citing mycosmo</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">mycosmo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -218,7 +217,7 @@
       
       
       
-      <li><a href="_sources/index.rst" target="_blank"
+      <li><a href="_sources/quickstart.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -228,7 +227,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.rst</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -302,7 +301,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to mycosmo’s documentation!</h1>
+    <h1>Quickstart Guide</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -312,10 +311,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-usage">Example Usage</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculating-the-hubble-parameter">Example: Calculating the Hubble Parameter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculating-critical-density">Example: Calculating Critical Density</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cosmological-parameters">Cosmological Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constants">Constants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-usage">Advanced Usage</a></li>
 </ul>
             </nav>
         </div>
@@ -327,74 +331,100 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="welcome-to-mycosmo-s-documentation">
-<h1>Welcome to mycosmo’s documentation!<a class="headerlink" href="#welcome-to-mycosmo-s-documentation" title="Link to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is a demonstration package created for a course on Scientific Software Development.
-The package and its documentation are designed to showcase best practices in scientific
-software development. This is not a real cosmology package and should not be used in
-actual research.</p>
-</div>
-<p>mycosmo is a Python package designed for cosmological calculations and analysis. It provides
-essential tools for working with cosmological parameters and performing fundamental
-cosmological calculations.</p>
-<section id="key-features">
-<h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Calculation of the Hubble parameter at different redshifts</p></li>
-<li><p>Computation of critical density in the universe</p></li>
-<li><p>Standard cosmological constants and unit conversions</p></li>
-<li><p>Support for various cosmological models through parameter dictionaries</p></li>
-</ul>
-</section>
-<section id="example-usage">
-<h2>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading">#</a></h2>
-<p>The package can be used to calculate important cosmological parameters. For example,
-here’s how the Hubble parameter and critical density vary with redshift:</p>
-<a class="reference internal image-reference" href="_images/cosmology_plots.png"><img alt="Cosmology plots showing Hubble parameter and critical density as a function of redshift" class="align-center" src="_images/cosmology_plots.png" style="width: 800px;" />
-</a>
-</section>
+  <section id="quickstart-guide">
+<h1>Quickstart Guide<a class="headerlink" href="#quickstart-guide" title="Link to this heading">#</a></h1>
+<p>This guide will help you get started with using the <code class="docutils literal notranslate"><span class="pre">mycosmo</span></code> package for cosmological calculations.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
-<p>To install the package and its dependencies, see the <a class="reference internal" href="dependencies.html"><span class="doc">Dependencies</span></a> page.</p>
-</section>
-<section id="citation">
-<h2>Citation<a class="headerlink" href="#citation" title="Link to this heading">#</a></h2>
-<p>If you use this package in your work, please see the <a class="reference internal" href="citation.html"><span class="doc">Citing mycosmo</span></a> page for citation information.</p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="about.html#scope">Scope</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#basic-usage">Basic Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#cosmological-parameters">Cosmological Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#constants">Constants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#advanced-usage">Advanced Usage</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="dependencies.html#core-dependencies">Core Dependencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dependencies.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dependencies.html#optional-dependencies">Optional Dependencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dependencies.html#version-compatibility">Version Compatibility</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="citation.html">Citing mycosmo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="citation.html#bibtex-entry">BibTeX Entry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="citation.html#plain-text-citation">Plain Text Citation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">mycosmo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mycosmo.html">mycosmo package</a></li>
-</ul>
-</li>
-</ul>
+<p>First, install the package using pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>mycosmo
+</pre></div>
 </div>
+</section>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h2>
+<p>The package provides two main functions for cosmological calculations:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hubble</span></code>: Calculate the Hubble parameter at a given redshift</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">critical_density</span></code>: Calculate the critical density at a given redshift</p></li>
+</ol>
+<section id="example-calculating-the-hubble-parameter">
+<h3>Example: Calculating the Hubble Parameter<a class="headerlink" href="#example-calculating-the-hubble-parameter" title="Link to this heading">#</a></h3>
+<p>Here’s how to calculate the Hubble parameter at different redshifts:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mycosmo.cosmology</span><span class="w"> </span><span class="kn">import</span> <span class="n">hubble</span>
+
+<span class="c1"># Define cosmological parameters</span>
+<span class="n">cosmo_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;H0&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>  <span class="c1"># km/s/Mpc</span>
+    <span class="s2">&quot;omega_m_0&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span>
+    <span class="s2">&quot;omega_k_0&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">&quot;omega_lambda_0&quot;</span><span class="p">:</span> <span class="mf">0.7</span>
+<span class="p">}</span>
+
+<span class="c1"># Calculate H(z) at z = 0</span>
+<span class="n">H0</span> <span class="o">=</span> <span class="n">hubble</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">cosmo_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;H0 = </span><span class="si">{</span><span class="n">H0</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> km/s/Mpc&quot;</span><span class="p">)</span>
+
+<span class="c1"># Calculate H(z) at multiple redshifts</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+<span class="n">H_z</span> <span class="o">=</span> <span class="n">hubble</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">cosmo_dict</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">z_val</span><span class="p">,</span> <span class="n">H_val</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">H_z</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;H(z=</span><span class="si">{</span><span class="n">z_val</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">H_val</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> km/s/Mpc&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="example-calculating-critical-density">
+<h3>Example: Calculating Critical Density<a class="headerlink" href="#example-calculating-critical-density" title="Link to this heading">#</a></h3>
+<p>To calculate the critical density at different redshifts:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">mycosmo.cosmology</span><span class="w"> </span><span class="kn">import</span> <span class="n">critical_density</span>
+
+<span class="c1"># Calculate ρ_c(z) at z = 0</span>
+<span class="n">rho_c0</span> <span class="o">=</span> <span class="n">critical_density</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">cosmo_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ρ_c(0) = </span><span class="si">{</span><span class="n">rho_c0</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> kg/m³&quot;</span><span class="p">)</span>
+
+<span class="c1"># Calculate ρ_c(z) at multiple redshifts</span>
+<span class="n">rho_c</span> <span class="o">=</span> <span class="n">critical_density</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">cosmo_dict</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">z_val</span><span class="p">,</span> <span class="n">rho_val</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">rho_c</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ρ_c(z=</span><span class="si">{</span><span class="n">z_val</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">rho_val</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> kg/m³&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="cosmological-parameters">
+<h2>Cosmological Parameters<a class="headerlink" href="#cosmological-parameters" title="Link to this heading">#</a></h2>
+<p>The package uses a dictionary to specify cosmological parameters. The required parameters are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">H0</span></code>: Hubble constant at z=0 (km/s/Mpc)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">omega_m_0</span></code>: Matter density parameter at z=0</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">omega_k_0</span></code>: Curvature density parameter at z=0</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">omega_lambda_0</span></code>: Dark energy density parameter at z=0</p></li>
+</ul>
+</section>
+<section id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Link to this heading">#</a></h2>
+<p>The package provides some useful cosmological constants in the <code class="docutils literal notranslate"><span class="pre">mycosmo.constants</span></code> module:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">G</span></code>: Gravitational constant</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Mpc</span></code>: Megaparsec in meters</p></li>
+</ul>
+<p>You can use these constants in your calculations:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">mycosmo.constants</span><span class="w"> </span><span class="kn">import</span> <span class="n">G</span><span class="p">,</span> <span class="n">Mpc</span>
+
+<span class="c1"># Example: Convert H0 from km/s/Mpc to s^-1</span>
+<span class="n">H0_si</span> <span class="o">=</span> <span class="mi">70</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">/</span> <span class="n">Mpc</span>  <span class="c1"># Convert to s^-1</span>
+</pre></div>
+</div>
+</section>
+<section id="advanced-usage">
+<h2>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading">#</a></h2>
+<p>For more advanced usage, including:</p>
+<ul class="simple">
+<li><p>Custom cosmological models</p></li>
+<li><p>Additional cosmological calculations</p></li>
+<li><p>Integration with other scientific packages</p></li>
+</ul>
+<p>Please refer to the full API documentation in the :doc:<code class="docutils literal notranslate"><span class="pre">modules</span></code> section.</p>
 </section>
 </section>
 
@@ -409,12 +439,21 @@ here’s how the Hubble parameter and critical density vary with redshift:</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="about.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">About</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="dependencies.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">About</p>
+        <p class="prev-next-title">Dependencies</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -434,10 +473,15 @@ here’s how the Hubble parameter and critical density vary with redshift:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-usage">Example Usage</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculating-the-hubble-parameter">Example: Calculating the Hubble Parameter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculating-critical-density">Example: Calculating Critical Density</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cosmological-parameters">Cosmological Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constants">Constants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-usage">Advanced Usage</a></li>
 </ul>
   </nav></div>
 
