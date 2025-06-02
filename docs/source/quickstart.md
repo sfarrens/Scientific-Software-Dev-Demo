@@ -1,5 +1,9 @@
 # Quickstart Guide
 
+```{warning} Demonstration Package
+This is a demonstration package created for a course on Scientific Software Development. The package and its documentation are designed to showcase best practices in scientific software development. This is not a real cosmology package and should not be used in actual research.
+```
+
 This guide will help you get started with using the `mycosmo` package for cosmological calculations.
 
 ## Installation
@@ -94,4 +98,4 @@ For more advanced usage, including:
 - Additional cosmological calculations
 - Integration with other scientific packages
 
-Please refer to the full API documentation in the :doc:`modules` section. 
+Please refer to the full API documentation in the {doc}`modules` section. 

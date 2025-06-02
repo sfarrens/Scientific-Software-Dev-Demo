@@ -1,7 +1,8 @@
 # Citing mycosmo
 
-!!! warning "Demonstration Only"
-    This is a demonstration citation page. The reference below is fictional and should not be used in actual research. In a real package, this would contain the actual published paper reference for the software.
+```{warning} Demonstration Only
+This is a demonstration citation page. The reference below is fictional and should not be used in actual research. In a real package, this would contain the actual published paper reference for the software.
+```
 
 If you use `mycosmo` in your research, please cite the following paper:
 
