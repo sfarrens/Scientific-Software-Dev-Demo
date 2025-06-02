@@ -19,3 +19,5 @@ dependencies:
   - pip
   - pip:
     - pytest-pydocstyle
+    - line_profiler
+    - memory_profiler

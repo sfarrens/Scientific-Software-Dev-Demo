@@ -1,0 +1,45 @@
+name: Profiling
+
+on: workflow_dispatch
+
+jobs:
+  profile:
+    name: Run Performance Profiling
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ["3.11"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Check Python version
+        run: python --version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install ".[profile]"
+          python -m pip install line_profiler memory_profiler
+
+      - name: Run profiling script
+        run: python scripts/profile_mycosmo.py
+
+      - name: Upload profiling results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: profiling-results-${{ matrix.os }}
+          path: |
+            *.prof
+            *.lprof
+            *.log
+          if-no-files-found: warn 

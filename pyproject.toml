@@ -12,6 +12,7 @@ version = "0.0.1"
 docs = ["myst-parser", "numpydoc", "sphinx", "sphinx-book-theme"]
 lint = ["black", "isort"]
 release = ["build", "twine"]
+profile = ["line_profiler", "memory_profiler"]
 test = [
     "pytest",
     "pytest-cov",

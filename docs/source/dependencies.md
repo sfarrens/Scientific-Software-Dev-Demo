@@ -42,6 +42,9 @@ pip install -e "mycosmo[lint]"
 # For release
 pip install -e "mycosmo[release]"
 
+# For profiling
+pip install -e "mycosmo[profile]"
+
 # For testing
 pip install -e "mycosmo[test]"
 
