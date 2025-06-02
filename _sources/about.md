@@ -1,7 +1,8 @@
 # About
 
-!!! warning "Demonstration Package"
-    This is a demonstration package created for a course on Scientific Software Development. The package and its documentation are designed to showcase best practices in scientific software development, including documentation, testing, and project structure. This is not a real cosmology package and should not be used in actual research.
+```{warning} Demonstration Package
+This is a demonstration package created for a course on Scientific Software Development. The package and its documentation are designed to showcase best practices in scientific software development, including documentation, testing, and project structure. This is not a real cosmology package and should not be used in actual research.
+```
 
 `mycosmo` is a Python package designed for cosmological calculations and analysis. The package provides essential tools for working with cosmological parameters and performing fundamental cosmological calculations.
 
