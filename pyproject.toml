@@ -6,7 +6,7 @@ authors = [{ "name" = "Samuel Farrens", "email" = "samuel.farrens@cea.fr" }]
 maintainers = [{ "name" = "Samuel Farrens", "email" = "samuel.farrens@cea.fr" }]
 description = 'This is an example cosmology package.'
 dependencies = ["numpy"]
-version = "0.0.1"
+version = "0.0.2"
 
 [project.optional-dependencies]
 docs = ["myst-parser", "numpydoc", "sphinx", "sphinx-book-theme"]
@@ -22,7 +22,7 @@ test = [
 verify = ["astropy"]
 
 # Install for development
-dev = ["mycosmo[docs,lint,release,test]"]
+dev = ["mycosmo[docs,lint,release,profile,test,verify]"]
 
 [tool.pydocstyle]
 convention = "numpy"
