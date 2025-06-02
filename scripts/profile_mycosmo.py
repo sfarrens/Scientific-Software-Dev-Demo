@@ -4,15 +4,17 @@ Profiling script for mycosmo package.
 Demonstrates different profiling approaches for scientific computing code.
 """
 
-import timeit
 import cProfile
-import pstats
 import io
+import pstats
 import sys
+import timeit
 from datetime import datetime
+
+import numpy as np
 from line_profiler import LineProfiler
 from memory_profiler import profile
-import numpy as np
+
 from mycosmo import cosmology
 
 
