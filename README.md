@@ -16,7 +16,7 @@ The slides accompanying this repository can be found [here](https://sfarrens.git
 Example API documentation for this repository can be found [here](https://sfarrens.github.io/Scientific-Software-Dev-Demo/).
 
 ## Changelog
-- 01/06/2025: The content was updated for the [2025 COLOURS Programme](https://indico.ijclab.in2p3.fr/event/11110/)
+- 02/06/2025: The content was updated for the [2025 COLOURS Programme](https://indico.ijclab.in2p3.fr/event/11110/)
 - 26/08/2024: The content was updated for the [2024 edition of the Rodolphe Clédassou Summer School](https://ecole-euclid.cnrs.fr/2024-accueil/)
 - 28/08/2023: The first version was made for the [2023 edition of the Euclid Summer School](https://ecole-euclid.cnrs.fr/2023-accueil/)
 
@@ -24,26 +24,37 @@ Example API documentation for this repository can be found [here](https://sfarre
 
 To follow this course you will need to have Python (ideally v3.11) installed with the following dependencies:
 
-- numpy
-- astropy
+### Core Dependencies
+- python=3.11
+- numpy>=1.25
+- build
+- twine
+
+### Development Dependencies
 - black
 - isort
 - myst-parser
 - numpydoc
 - pytest
-- pytest-pydocstyle
 - pytest-emoji
 - pytest-cov
 - sphinx
 - sphinx-book-theme
-- twine
+
+### Optional Dependencies
+- astropy (for verification)
+
+### Additional Dependencies (via pip)
+- pytest-pydocstyle
+- line_profiler
+- memory_profiler
 
 ### Manual install
 
 All of these packages can easily be installed from [PyPI](https://pypi.org/) using `pip`.
 
 ```bash
-pip install numpy black ...
+pip install numpy>=1.25 build twine black isort myst-parser numpydoc pytest pytest-emoji pytest-cov sphinx sphinx-book-theme pytest-pydocstyle line_profiler memory_profiler
 ```
 
 ### Conda install
@@ -69,12 +80,16 @@ You can run the code using the provided [Docker](https://www.docker.com/) image 
 docker login ghcr.io
 ```
 
-Then you can pull and run the image:
+Then you can pull the latest image:
 
 ```bash
 # Pull the latest image
 docker pull ghcr.io/sfarrens/scientific-software-dev-demo:main
+```
 
+And run an interactive container:
+
+```bash
 # Run an interactive container with your current directory mounted
 docker run --rm -it ghcr.io/sfarrens/scientific-software-dev-demo:main
 ```
