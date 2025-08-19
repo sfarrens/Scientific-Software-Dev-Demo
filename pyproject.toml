@@ -19,7 +19,7 @@ classifiers = [
 [project.optional-dependencies]
 docs = ["myst-parser", "numpydoc", "sphinx", "sphinx-book-theme"]
 lint = ["black", "isort"]
-release = ["build", "twine"]
+release = ["python-build", "twine"]
 profile = ["line_profiler", "memory_profiler"]
 test = [
     "pytest",

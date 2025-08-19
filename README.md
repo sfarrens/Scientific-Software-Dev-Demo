@@ -27,7 +27,7 @@ To follow this course you will need to have Python (ideally v3.11) installed wit
 ### Core Dependencies
 - python=3.11
 - numpy>=1.25
-- build
+- python-build
 - twine
 
 ### Development Dependencies
