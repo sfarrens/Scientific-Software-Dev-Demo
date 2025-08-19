@@ -65,8 +65,8 @@ def profile_with_cprofile():
     redshifts = np.linspace(0, 10, 1000)
 
     # Profile both functions
-    hubble_values = cosmology.hubble(redshifts, cosmo_dict)
-    density_values = cosmology.critical_density(redshifts, cosmo_dict)
+    cosmology.hubble(redshifts, cosmo_dict)
+    cosmology.critical_density(redshifts, cosmo_dict)
 
     profiler.disable()
     s = io.StringIO()
@@ -94,8 +94,8 @@ def profile_with_line_profiler():
     profiler.enable()
     cosmo_dict = {"H0": 70, "omega_m_0": 0.3, "omega_k_0": 0.0, "omega_lambda_0": 0.7}
     redshifts = np.linspace(0, 10, 1000)
-    hubble_values = cosmology.hubble(redshifts, cosmo_dict)
-    density_values = cosmology.critical_density(redshifts, cosmo_dict)
+    cosmology.hubble(redshifts, cosmo_dict)
+    cosmology.critical_density(redshifts, cosmo_dict)
     profiler.disable()
 
     # Capture and save results

@@ -16,6 +16,7 @@ The slides accompanying this repository can be found [here](https://sfarrens.git
 Example API documentation for this repository can be found [here](https://sfarrens.github.io/Scientific-Software-Dev-Demo/).
 
 ## Changelog
+- 19/08/2025: The content was updated for the [2025 edition of the Rodolphe Clédassou Summer School](https://eee2025.sciencesconf.org/)
 - 02/06/2025: The content was updated for the [2025 COLOURS Programme](https://indico.ijclab.in2p3.fr/event/11110/)
 - 26/08/2024: The content was updated for the [2024 edition of the Rodolphe Clédassou Summer School](https://ecole-euclid.cnrs.fr/2024-accueil/)
 - 28/08/2023: The first version was made for the [2023 edition of the Euclid Summer School](https://ecole-euclid.cnrs.fr/2023-accueil/)
